@@ -18,7 +18,8 @@ jobs:
           flutter-version: '2.2.0'
       - run: flutter pub get
       - run: flutter test
-      - run: flutter build ios --no-codesign
+      - run: |
+          flutter build ios --no-codesign
           cd build/ios/iphoneos
           mkdir Payload
           cd Payload
